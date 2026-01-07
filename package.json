@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A JavaScript library for Caesar Cipher",
   "keywords": [
-    "CaesarCipher"
+    "caesar cipher"
   ],
   "homepage": "https://github.com/RichardLiuCode/CaesarCipher#readme",
   "bugs": {
