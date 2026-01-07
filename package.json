@@ -1,0 +1,23 @@
+{
+  "name": "js-caesarcipher",
+  "version": "1.0.0",
+  "description": "A JavaScript library for Caesar Cipher",
+  "keywords": [
+    "CaesarCipher"
+  ],
+  "homepage": "https://github.com/RichardLiuCode/CaesarCipher#readme",
+  "bugs": {
+    "url": "https://github.com/RichardLiuCode/CaesarCipher/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RichardLiuCode/CaesarCipher.git"
+  },
+  "license": "MIT",
+  "author": "Richard Liu",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
