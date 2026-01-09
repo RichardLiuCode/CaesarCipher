@@ -1,17 +1,17 @@
 function CaesarCipher({ input, shift }) {
-    var originalOrderUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var originalOrderLow = "abcdefghijklmnopqrstuvwxyz";
-    var result = "";
-    var foundFlag = false;
-    for (var i = 0; i < input.length; i++) {
+    const originalOrderUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const originalOrderLow = "abcdefghijklmnopqrstuvwxyz";
+    let result = "";
+    let foundFlag = false;
+    for (let i = 0; i < input.length; i++) {
         foundFlag = false;
-        for (var j = 0; j < originalOrderUp.length; j++) {
+        for (let j = 0; j < originalOrderUp.length; j++) {
             if (input[i] == originalOrderUp[j]) {
                 result = result + originalOrderUp[(j + shift) % 26];
                 foundFlag = true;
             }
         }
-        for (var k = 0; k < originalOrderLow.length; k++) {
+        for (let k = 0; k < originalOrderLow.length; k++) {
             if (input[i] == originalOrderLow[k]) {
                 result = result + originalOrderLow[(k + shift) % 26];
                 foundFlag = true;
