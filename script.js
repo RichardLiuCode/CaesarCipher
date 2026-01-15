@@ -23,3 +23,23 @@ function CaesarCipher({ input, shift }) {
     }
     this.result = result;
 }
+
+CaesarCipher.deCipher = function (encryptedText, shifted) {
+    let decipher = new CaesarCipher({
+        "input": encryptedText,
+        "shift": shifted * -1
+    });
+    return decipher.result;
+}
+
+CaesarCipher.crack = function (encryptedText) {
+    let allShifts = []
+    for (let i = 0; i < 26; i++) {
+        let shift = new CaesarCipher({
+            "input": encryptedText,
+            "shift": i
+        });
+        allShifts.push(shift.result)
+    }
+    return allShifts
+}
