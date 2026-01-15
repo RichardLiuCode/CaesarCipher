@@ -32,7 +32,8 @@ console.log(cipher.result);
 Use the function `CaesarCipher.deCipher()`
 
 ```javascript
-CaesarCipher.deCipher("Jgnnq Yqtnf", 2)
+let decipher = CaesarCipher.deCipher("Jgnnq Yqtnf", 2);
+console.log(decipher)
 // The output will be "Hello World"
 ```
 
@@ -41,5 +42,6 @@ CaesarCipher.deCipher("Jgnnq Yqtnf", 2)
 Use the function `CaesarCipher.crack()`
 
 ```javascript
-CaesarCipher.crack("Jgnnq Yqtnf")
+let crack = CaesarCipher.crack("Jgnnq Yqtnf");
+console.log(crack);
 ```
