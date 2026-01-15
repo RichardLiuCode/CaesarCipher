@@ -9,6 +9,8 @@ Add this script tag to your html code
 
 # Useage
 
+**Cipher the text**
+
 Use the function `new CaesarCipher()`
 
 Example: "Hello World", after shifting 2 letters will be "Jgnnq Yqtnf"
@@ -24,3 +26,20 @@ console.log(cipher.result);
 
 * The `input` is unciphered plain text.
 * The `shift` is shift how many letters.
+
+**Decipher the text**
+
+Use the function `CaesarCipher.deCipher()`
+
+```javascript
+CaesarCipher.deCipher("Jgnnq Yqtnf", 2)
+// The output will be "Hello World"
+```
+
+**Crack ciphered text**
+
+Use the function `CaesarCipher.crack()`
+
+```javascript
+CaesarCipher.crack("Jgnnq Yqtnf")
+```
