@@ -27,7 +27,7 @@ function CaesarCipher({ input, shift }) {
 CaesarCipher.deCipher = function (encryptedText, shifted) {
     let decipher = new CaesarCipher({
         "input": encryptedText,
-        "shift": shifted * -1
+        "shift": (shifted * -1) + 26
     });
     return decipher.result;
 }

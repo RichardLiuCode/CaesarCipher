@@ -9,7 +9,7 @@ This package are some packed functions using for process Caesar cipher.
 Add this script tag to your html code
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/js-caesarcipher@1.1.2/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-caesarcipher@1.1.3/script.js"></script>
 ```
 
 # Useage
