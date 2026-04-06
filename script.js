@@ -44,7 +44,7 @@ CaesarCipher.crack = function (encryptedText) {
     return allShifts;
 };
 
-if (typeof module != undefined && module.exports) {
+if (typeof module != "undefined" && module.exports) {
     function cipher({ input, shift }) {
         const caesarcipher = new CaesarCipher({
             "input": input,
