@@ -30,16 +30,32 @@ CaesarCipher.deCipher = function (encryptedText, shifted) {
         "shift": (shifted * -1) + 26
     });
     return decipher.result;
-}
+};
 
 CaesarCipher.crack = function (encryptedText) {
-    let allShifts = []
+    let allShifts = [];
     for (let i = 0; i < 26; i++) {
         let shift = new CaesarCipher({
             "input": encryptedText,
             "shift": i
         });
-        allShifts.push(shift.result)
+        allShifts.push(shift.result);
     }
-    return allShifts
+    return allShifts;
+};
+
+if (typeof module != undefined && module.exports) {
+    function cipher({ input, shift }) {
+        const caesarcipher = new CaesarCipher({
+            "input": input,
+            "shift": shift
+        });
+        const result = caesarcipher.result;
+        return { result: result };
+    }
+
+    function deCipher(encryptedText, shifted) {
+        return CaesarCipher.deCipher(encryptedText, shifted);
+    }
+    module.exports = { cipher, deCipher };
 }
