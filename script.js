@@ -53,9 +53,7 @@ if (typeof module != undefined && module.exports) {
         const result = caesarcipher.result;
         return { result: result };
     }
-
-    function deCipher(encryptedText, shifted) {
-        return CaesarCipher.deCipher(encryptedText, shifted);
-    }
-    module.exports = { cipher, deCipher };
+    const deCipher = CaesarCipher.deCipher;
+    const crack = CaesarCipher.crack;
+    module.exports = { cipher, deCipher, crack };
 }
