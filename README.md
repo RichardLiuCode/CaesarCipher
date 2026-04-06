@@ -5,27 +5,45 @@
 This package are some packed functions using for process Caesar cipher.
 
 # Installation
-
+*  Browser
 Add this script tag to your html code
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/js-caesarcipher@1.1.5/script.js"></script>
 ```
 
+* Node.js
+Install Command
+
+```bash
+npm install js-caesarcipher
+```
+
 # Useage
 
 **Cipher the text**
-
 Use the function `new CaesarCipher()` to cipher raw text.
 
 Example: "Hello World", after shifting 2 letters will be "Jgnnq Yqtnf"
 
 ```javascript
+// For Browser useage
 let cipher = new CaesarCipher({
     "input": "Hello World",
     "shift": 2
 });
 console.log(cipher.result);
+
+// For Node.js useage
+const CaesarCipher = require("js-caesarcipher");
+
+const cipher = CaesarCipher.cipher({
+    "input": "Hello World",
+    "shift": 2
+});
+
+console.log(cipher.result);
+
 // The output will be "Jgnnq Yqtnf"
 ```
 
@@ -37,6 +55,7 @@ console.log(cipher.result);
 Use the function `CaesarCipher.deCipher()` to decipher ciphered text.
 
 ```javascript
+// For both Browser and Node.js useage
 let decipher = CaesarCipher.deCipher("Jgnnq Yqtnf", 2);
 console.log(decipher)
 // The output will be "Hello World"
@@ -47,6 +66,7 @@ console.log(decipher)
 Use the function `CaesarCipher.crack()` to crack all the possible shifts of a ciphered text if you don't have the shift. 
 
 ```javascript
+// For both Browser and Node.js useage
 let crack = CaesarCipher.crack("Jgnnq Yqtnf");
 console.log(crack);
 /* 
