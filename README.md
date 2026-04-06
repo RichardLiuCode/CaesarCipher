@@ -6,6 +6,7 @@ This package are some packed functions using for process Caesar cipher.
 
 # Installation
 *  Browser
+
 Add this script tag to your html code
 
 ```html
@@ -13,6 +14,7 @@ Add this script tag to your html code
 ```
 
 * Node.js
+
 Install Command
 
 ```bash
