@@ -23,7 +23,16 @@ npm install js-caesarcipher
 
 # Useage
 
+**For node.js enviroment**
+
+If you are in node.js enviroment, you need to initalize first
+
+```javascript
+const CaesarCipher = require("js-caesarcipher");
+```
+
 **Cipher the text**
+
 Use the function `new CaesarCipher()` to cipher raw text.
 
 Example: "Hello World", after shifting 2 letters will be "Jgnnq Yqtnf"
@@ -37,8 +46,6 @@ let cipher = new CaesarCipher({
 console.log(cipher.result);
 
 // For Node.js useage
-const CaesarCipher = require("js-caesarcipher");
-
 const cipher = CaesarCipher.cipher({
     "input": "Hello World",
     "shift": 2
